@@ -56,6 +56,8 @@
 		AC9400E61B624C97004125A3 /* url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
 		AC9400E81B624C9D004125A3 /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
 		AC9400EA1B624CA7004125A3 /* base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = base.swift; sourceTree = "<group>"; };
+		AC9400EE1B628396004125A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		AC9400EF1B6283B1004125A3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		AC9400A71B624A5E004125A3 = {
 			isa = PBXGroup;
 			children = (
+				AC9400EE1B628396004125A3 /* README.md */,
 				AC9400B21B624A5E004125A3 /* iOSExample */,
 				AC9400CB1B624C71004125A3 /* SwiftStroke */,
 				AC9400D71B624C71004125A3 /* SwiftStrokeTests */,
@@ -113,6 +116,7 @@
 				AC9400BA1B624A5E004125A3 /* Assets.xcassets */,
 				AC9400BC1B624A5E004125A3 /* LaunchScreen.storyboard */,
 				AC9400BF1B624A5E004125A3 /* Info.plist */,
+				AC9400EF1B6283B1004125A3 /* readme.md */,
 			);
 			path = iOSExample;
 			sourceTree = "<group>";

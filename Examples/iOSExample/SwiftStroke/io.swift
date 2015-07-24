@@ -8,19 +8,38 @@
 
 import Foundation
 
-
-struct io {
+struct IO<T> {
+	typealias Fun = () -> T
 	
-	static func docsDir() -> String? {
-		return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first
-		
-		return nil
+	let unsafePerformIO : Fun
+	init(value : Fun) {
+		self.unsafePerformIO = value
+	}
+
+	static func of<T>(object: T) -> IO<T> {
+		return IO<T>(value: {
+			() -> T in
+			return object
+		})
 	}
 	
-	static func cachesDir() -> String? {
-		return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first
-		
-		return nil
+	func map(f : (T) -> T) -> IO<T> {
+		return IO<T>(value: {
+			() -> T in
+			return f(self.unsafePerformIO())
+		})
+	}
+}
+
+struct io {
+	static func docsDir() -> IO<String?> {
+		return IO<String?>(value: { () -> String? in
+			return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first })
+	}
+	
+	static func cachesDir() -> IO<String?> {
+		return IO<String?>(value: { () -> String? in
+			return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first })
 	}
 	
 	static func writeFile(path : String, contents: String, encoding : NSStringEncoding = NSUTF8StringEncoding) -> Bool {

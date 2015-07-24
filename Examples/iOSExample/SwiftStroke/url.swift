@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+
+struct url {
+	func load(urlString: String) -> String? {
+		guard let url = NSURL(string: urlString) else { return nil }
+		do {
+			return try String(contentsOfURL: url)
+		}
+		catch {
+			return nil
+		}
+	}
+}
