@@ -42,24 +42,36 @@ public struct io {
 			return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first })
 	}
 	
-	public static func writeFile(path : String, contents: String, encoding : NSStringEncoding = NSUTF8StringEncoding) -> Bool {
-		do {
-			try contents.writeToFile(path, atomically: true, encoding: encoding)
-			return true
-		}
-		catch {
-			return false
-		}
+	public static func writeFile(path : String, contents: String, encoding : NSStringEncoding = NSUTF8StringEncoding) -> IO<String?> {
+		return IO(value : {
+			() -> String? in
+			do {
+				try contents.writeToFile(path, atomically: true, encoding: encoding)
+				return contents
+			}
+			catch {
+				return nil
+			}
+		})
 	}
 	
-	public static func readFile(path : String) -> String? {
-		do {
-			let contents = try String(contentsOfFile: path)
-			return contents
-		}
-		catch {
-			return nil
-		}
+	public static func readFile(path : String) -> IO<String?> {
+		return IO(value: { () -> String? in
+			do {
+				let contents = try String(contentsOfFile: path)
+				return contents
+			}
+			catch {
+				return nil
+			}
+		})
+	}
+	
+	public static func print(string : String) -> IO<String> {
+		return IO(value: { () -> String in
+			print(string)
+			return string
+		})
 	}
 	
 	
