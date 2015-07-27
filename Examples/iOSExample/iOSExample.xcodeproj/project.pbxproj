@@ -12,24 +12,17 @@
 		AC9400B91B624A5E004125A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9400B71B624A5E004125A3 /* Main.storyboard */; };
 		AC9400BB1B624A5E004125A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9400BA1B624A5E004125A3 /* Assets.xcassets */; };
 		AC9400BE1B624A5E004125A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9400BC1B624A5E004125A3 /* LaunchScreen.storyboard */; };
-		AC9400CD1B624C71004125A3 /* SwiftStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = AC9400CC1B624C71004125A3 /* SwiftStroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC9400D41B624C71004125A3 /* SwiftStroke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9400CA1B624C71004125A3 /* SwiftStroke.framework */; };
 		AC9400D91B624C71004125A3 /* SwiftStrokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400D81B624C71004125A3 /* SwiftStrokeTests.swift */; };
-		AC9400E51B624C90004125A3 /* io.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E41B624C90004125A3 /* io.swift */; };
-		AC9400E71B624C97004125A3 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E61B624C97004125A3 /* url.swift */; };
-		AC9400E91B624C9D004125A3 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E81B624C9D004125A3 /* re.swift */; };
-		AC9400EB1B624CA7004125A3 /* base.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400EA1B624CA7004125A3 /* base.swift */; };
+		ACAE7ADA1B63D570004344F6 /* base.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400EA1B624CA7004125A3 /* base.swift */; };
+		ACAE7ADB1B63D570004344F6 /* path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9C0A91B62ECF80040CB1D /* path.swift */; };
+		ACAE7ADC1B63D570004344F6 /* io.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E41B624C90004125A3 /* io.swift */; };
+		ACAE7ADD1B63D570004344F6 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E61B624C97004125A3 /* url.swift */; };
+		ACAE7ADE1B63D570004344F6 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E81B624C9D004125A3 /* re.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AC9400D51B624C71004125A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC9400A81B624A5E004125A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC9400C91B624C71004125A3;
-			remoteInfo = SwiftStroke;
-		};
-		AC9400EC1B6256DF004125A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC9400A81B624A5E004125A3 /* Project object */;
 			proxyType = 1;
@@ -58,6 +51,7 @@
 		AC9400EA1B624CA7004125A3 /* base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = base.swift; sourceTree = "<group>"; };
 		AC9400EE1B628396004125A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		AC9400EF1B6283B1004125A3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		ACC9C0A91B62ECF80040CB1D /* path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = path.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +120,10 @@
 			children = (
 				AC9400CC1B624C71004125A3 /* SwiftStroke.h */,
 				AC9400EA1B624CA7004125A3 /* base.swift */,
-				AC9400E11B624C77004125A3 /* io */,
-				AC9400E21B624C7C004125A3 /* url */,
-				AC9400E31B624C83004125A3 /* re */,
+				ACC9C0A91B62ECF80040CB1D /* path.swift */,
+				AC9400E41B624C90004125A3 /* io.swift */,
+				AC9400E61B624C97004125A3 /* url.swift */,
+				AC9400E81B624C9D004125A3 /* re.swift */,
 				AC9400CE1B624C71004125A3 /* Info.plist */,
 			);
 			path = SwiftStroke;
@@ -143,30 +138,6 @@
 			path = SwiftStrokeTests;
 			sourceTree = "<group>";
 		};
-		AC9400E11B624C77004125A3 /* io */ = {
-			isa = PBXGroup;
-			children = (
-				AC9400E41B624C90004125A3 /* io.swift */,
-			);
-			name = io;
-			sourceTree = "<group>";
-		};
-		AC9400E21B624C7C004125A3 /* url */ = {
-			isa = PBXGroup;
-			children = (
-				AC9400E61B624C97004125A3 /* url.swift */,
-			);
-			name = url;
-			sourceTree = "<group>";
-		};
-		AC9400E31B624C83004125A3 /* re */ = {
-			isa = PBXGroup;
-			children = (
-				AC9400E81B624C9D004125A3 /* re.swift */,
-			);
-			name = re;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -174,7 +145,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC9400CD1B624C71004125A3 /* SwiftStroke.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +162,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				AC9400ED1B6256DF004125A3 /* PBXTargetDependency */,
 			);
 			name = iOSExample;
 			productName = iOSExample;
@@ -310,6 +279,11 @@
 			files = (
 				AC9400B61B624A5E004125A3 /* ViewController.swift in Sources */,
 				AC9400B41B624A5E004125A3 /* AppDelegate.swift in Sources */,
+				ACAE7ADE1B63D570004344F6 /* re.swift in Sources */,
+				ACAE7ADC1B63D570004344F6 /* io.swift in Sources */,
+				ACAE7ADD1B63D570004344F6 /* url.swift in Sources */,
+				ACAE7ADB1B63D570004344F6 /* path.swift in Sources */,
+				ACAE7ADA1B63D570004344F6 /* base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,10 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC9400EB1B624CA7004125A3 /* base.swift in Sources */,
-				AC9400E51B624C90004125A3 /* io.swift in Sources */,
-				AC9400E91B624C9D004125A3 /* re.swift in Sources */,
-				AC9400E71B624C97004125A3 /* url.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,11 +309,6 @@
 			isa = PBXTargetDependency;
 			target = AC9400C91B624C71004125A3 /* SwiftStroke */;
 			targetProxy = AC9400D51B624C71004125A3 /* PBXContainerItemProxy */;
-		};
-		AC9400ED1B6256DF004125A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AC9400C91B624C71004125A3 /* SwiftStroke */;
-			targetProxy = AC9400EC1B6256DF004125A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -454,10 +419,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				FRAMEWORK_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
 				INFOPLIST_FILE = iOSExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jms.iOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -465,10 +434,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				FRAMEWORK_SEARCH_PATHS = "${BUILT_PRODUCTS_DIR}/**";
 				INFOPLIST_FILE = iOSExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jms.iOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
@@ -482,6 +455,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftStroke/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -507,6 +481,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftStroke/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -566,6 +541,7 @@
 				AC9400C41B624A5E004125A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC9400DB1B624C71004125A3 /* Build configuration list for PBXNativeTarget "SwiftStroke" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +550,7 @@
 				AC9400DD1B624C71004125A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC9400DE1B624C71004125A3 /* Build configuration list for PBXNativeTarget "SwiftStrokeTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +559,7 @@
 				AC9400E01B624C71004125A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

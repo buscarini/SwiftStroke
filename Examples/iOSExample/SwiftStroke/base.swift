@@ -24,10 +24,37 @@ import Foundation
 //	return nil;
 //}
 
-enum Either<T1, T2> {
+public let blah = "blah"
+
+
+public enum Either<T1, T2> {
 	case Left(T1)
 	case Right(T2)
 }
 
-//typealias Result<T2> = Either<String,T2>
+public struct Task<Data,Error> {
+	public let run : (reject:(Error)-> Void, success: (Data) -> Void) -> Void
+	public init(f : (reject: (Error) -> Void, success: (Data) -> Void) -> ()) {
+		self.run = f
+	}
+	public static func of<T>(object : T) -> Task<T,String> {
+		return Task<T,String>(f: {
+			(reject, success) in
+			success(object)
+		})
+	}
+	
+	public func map<Data2>(f: (Data) -> Data2) -> Task<Data2,Error> {
+		return Task<Data2,Error>(f: {
+			(reject, success) in
+			self.run(reject: reject,
+				success: {
+					(data) in
+					success(f(data))
+				}
+			)
+		})
+	}
+}
+
 
