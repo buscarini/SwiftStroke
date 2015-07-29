@@ -19,6 +19,7 @@
 		ACAE7ADC1B63D570004344F6 /* io.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E41B624C90004125A3 /* io.swift */; };
 		ACAE7ADD1B63D570004344F6 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E61B624C97004125A3 /* url.swift */; };
 		ACAE7ADE1B63D570004344F6 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9400E81B624C9D004125A3 /* re.swift */; };
+		ACAE7AE11B6840AA004344F6 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE7ADF1B683C9D004344F6 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AC9400EA1B624CA7004125A3 /* base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = base.swift; sourceTree = "<group>"; };
 		AC9400EE1B628396004125A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		AC9400EF1B6283B1004125A3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		ACAE7ADF1B683C9D004344F6 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		ACC9C0A91B62ECF80040CB1D /* path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = path.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				AC9400CC1B624C71004125A3 /* SwiftStroke.h */,
 				AC9400EA1B624CA7004125A3 /* base.swift */,
+				ACAE7ADF1B683C9D004344F6 /* utils.swift */,
 				ACC9C0A91B62ECF80040CB1D /* path.swift */,
 				AC9400E41B624C90004125A3 /* io.swift */,
 				AC9400E61B624C97004125A3 /* url.swift */,
@@ -284,6 +287,7 @@
 				ACAE7ADD1B63D570004344F6 /* url.swift in Sources */,
 				ACAE7ADB1B63D570004344F6 /* path.swift in Sources */,
 				ACAE7ADA1B63D570004344F6 /* base.swift in Sources */,
+				ACAE7AE11B6840AA004344F6 /* utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

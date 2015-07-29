@@ -17,18 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		url.load("https://www.google.com").run(reject: {
-			print($0)
-			}, success: {
-				print($0)
-		})
+//		url.load("https://www.google.com").run(reject: {
+//			print($0)
+//			}, success: {
+//				print($0)
+//		})
 		
 		
-//		SwiftStroke.url.load("https://www.google.com").map(SwiftStroke.io.writeFile("google.txt")).run(reject : {
-//			
-//			}, success {
-//				
-//			})
+		let matches = re.match("bl(.*?),", string: "Blah blih, bluh and more")
+		print(matches)
+//		print(matches?.first?.groups.first)
 		
 		
 		return true
