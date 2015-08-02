@@ -27,9 +27,38 @@ import Foundation
 public let blah = "blah"
 
 
-public enum Either<T1, T2> {
-	case Left(T1)
-	case Right(T2)
+public enum Either<ErrorType, ResultType> {
+	case Left(ErrorType)
+	case Right(ResultType)
+	
+	public func map<T>(f : (ResultType) -> T) -> Either<ErrorType, T> {
+		switch self {
+			case .Left(let error):
+				return Either<ErrorType,T>.Left(error)
+			case .Right(let value):
+				return Either<ErrorType,T>.Right(f(value))
+		}
+	}
+	
+	public static func flatten(value : Either<ErrorType,Either<ErrorType,ResultType>>) -> Either<ErrorType,ResultType> {
+		switch value {
+		case .Left(let error):
+			return Either<ErrorType,ResultType>.Left(error)
+		case .Right(let nested):
+			switch nested {
+				case .Left(let error):
+					return Either<ErrorType,ResultType>.Left(error)
+				case .Right(let inner):
+					return Either<ErrorType,ResultType>.Right(inner)
+			}
+		}
+	}
+}
+
+public extension Either {
+	public func flatMap<T>(f : (ResultType) -> Either<ErrorType,T>) -> Either<ErrorType, T> {
+		return Either<ErrorType,T>.flatten(map(f))
+	}
 }
 
 public struct Task<Data,Error> {

@@ -13,10 +13,21 @@ public struct path {
 	
 	static func join(strings: String...) -> String {
 		return strings.reduce("", combine: { (result, string) in
-//			let aResult = result as NSString
-//			let aString = string as NSString
-			
 			return result.stringByAppendingPathComponent(string)
+		})
+	}
+	
+	static func list(path: String) -> IO<Either<String,[String]>> {
+		let fileManager = NSFileManager.defaultManager()
+		return IO<Either<String,[String]>>(value: {
+			do {
+				let files = try fileManager.contentsOfDirectoryAtPath(path)
+				return Either.Right(files)
+			}
+			catch {
+				return Either.Left("Unknown Error")
+			}
+			
 		})
 	}
 	
